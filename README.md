@@ -23,13 +23,15 @@
 
 ### Home Page
 ![](https://github.com/argon1223/GDSC-Group5/blob/main/example/homepage.png)
-1. redirect to **subscription**
-2. redirect to **videos**
+1. click => redirect to **subscription**
+2. click => redirect to **videos**
 
 
 ### Videos
 ![](https://github.com/argon1223/GDSC-Group5/blob/main/example/video1.png)
-1. redirect to **homepage**
+1. click => redirect to **homepage**
+2. click => redirect to **the video**
+![](https://github.com/argon1223/GDSC-Group5/blob/main/example/yt.png)
 
 ### Subscriptions
 ![](https://github.com/argon1223/GDSC-Group5/blob/main/example/sub1.png)
