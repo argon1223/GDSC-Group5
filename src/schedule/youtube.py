@@ -1,10 +1,10 @@
 from os import path as Path
 import dateutil.parser
-from asyncio import create_task, new_event_loop, set_event_loop
+from asyncio import create_task
 from .crawler.getter import Json_Getter
 
 base_url = "https://www.googleapis.com/youtube/v3"
-API_key = "AIzaSyCpYixqBEqgZY_WDqHaoAJGAuKOWdyjbA4"
+API_key = "AIzaSyAdboyM3yCJKOfq0lT7GCLY4WcbUenB7u8"
 
 def url_maker(name, **kwargs):
     kwargs.setdefault("key", API_key)
@@ -68,7 +68,6 @@ class Channel_Searcher(Json_Getter):
 async def full_data(channel_id):
     tasks1 = create_task(Channel(channel_id).data())
     c = Channel_Searcher(channel_id)
-    # print(c.url)
     tasks2 = create_task(c.data())
     channel_data = await tasks1
     upcoming, recents = await tasks2
@@ -82,30 +81,32 @@ async def full_data(channel_id):
 
 async def crawler_videos(channels_ids):
     import aiohttp
-    from asyncio import wait
+    from asyncio import sleep as asleep
 
     async with aiohttp.ClientSession() as session:
         Json_Getter.get = session.get
-        tasks = []
-        for id_ in channels_ids:
-            tasks.append(create_task(full_data(id_)))
-        await wait(tasks)
+
         upcoming, recents = [], []
-        for task in tasks:
-            u, c = task.result()
+
+        for id_ in channels_ids:
+            u, c = await create_task(full_data(id_))
             upcoming.extend(u)
             recents.extend(c)
+            await asleep(0.2)
         
     return upcoming, recents
 
 def get_id(url):
     return Path.basename(url).split("?")[0]
 
-def youtube_crawler(channels_urls):    
+def youtube_crawler(channels_urls):
+    from asyncio import new_event_loop, set_event_loop
+    
     channels_ids = [get_id(url) for url in channels_urls]
 
     loop = new_event_loop()
     set_event_loop(loop)
+
     upcoming, recents = loop.run_until_complete(crawler_videos(channels_ids))
 
     upcoming.sort(key=lambda video_data: video_data["publishTime"])

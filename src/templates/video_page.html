@@ -28,7 +28,7 @@
     <div id="login">
     </div>
 
-    <div id="category"></div>
+    <!-- <div id="category"></div>
     <div id="home">
         <a href="../home"><img src="{% static 'home.png' %}"></a>
     </div>
@@ -40,73 +40,73 @@
     </div>
     <div id="favorite">
         <a href="."><img src="{% static 'favo.png' %}"></a>
-    </div>
+    </div> -->
 
     <div id="upcoming">
     </div>
-
-    <div class="video-shelf">
-        {% for upcoming in upcomings %}
-        <div class="video-box">
-            <div class="snapshot-box">
-                <a href={{ upcoming.url }}>
-                    <img src={{ upcoming.thumbnail }}>
-                </a>
-            </div>
-            <div style="display: inline-block">
-                <div class="profile-box">
-                    <a href={{ upcoming.channel_name }}>
-                        <img src={{ upcoming.profile }}>
-                    </a>
-                </div>
-                <div class="info-box">
+    <div class="container">
+        <div class="video-shelf">
+            {% for upcoming in upcomings %}
+            <div class="video-box" style="margin-top: 50px;">
+                <div class="snapshot-box">
                     <a href={{ upcoming.url }}>
-                        <ul>
-                            <li>{{ upcoming.title }}</li>
-                            <li>{{ upcoming.platform }}</li>
-                            <li>{{ upcoming.publishTime }}</li>
-                        </ul>
+                        <img src={{ upcoming.thumbnail }}>
                     </a>
                 </div>
+                <div style="display: inline-block">
+                    <div class="profile-box">
+                        <a href={{ upcoming.channel_name }}>
+                            <img src={{ upcoming.profile }}>
+                        </a>
+                    </div>
+                    <div>
+                        <a href={{ upcoming.url }} style="text-decoration: none;color:#adc4ee;text-align: left;line-height:1;">
+                            <ul>
+                                <li>{{ upcoming.title }}</li>
+                                <li>{{ upcoming.platform }}</li>
+                                <li>{{ upcoming.publishTime }}</li>
+                            </ul>
+                        </a>
+                    </div>
+                </div>
             </div>
+            {% endfor %}
         </div>
-        {% endfor %}
     </div>
 
-    <div class="content">
-    </div>
     </div>
     <div id="line">
     </div>
     <div id="recents">
     </div>
+    <div class="container">
+        <div class="video-shelf">
+            {% for video in videos %}
+            <div class="video-box">
+                <div class="snapshot-box">
+                    <a href={{ video.url }}>
+                        <img src={{ video.thumbnail }}>
+                    </a>
+                    <div class="profile-box">
+                        <a href={{ video.channel_name }}>
+                            <img src={{ video.profile }}>
+                        </a>
+                    </div>
+                </div>
 
-    <div class="video-shelf">
-        {% for video in videos %}
-        <div class="video-box">
-            <div class="snapshot-box">
-                <a href={{ video.url }}>
-                    <img src={{ video.thumbnail }}>
-                </a>
+                <div>
+                    <a href={{ video.url }} style="text-decoration: none;color:#adc4ee;text-align: left;line-height:1;">
+                        <ul>
+                            <li>{{ video.title }}</li>
+                            <li>{{ video.platform }}</li>
+                            <li>{{ video.publishTime }}</li>
+                        </ul>
+                    </a>
+                </div>
             </div>
-            <div class="profile-box">
-                <a href={{ video.channel_name }}>
-                    <img src={{ video.profile }}>
-                </a>
-            </div>
-            <div>
-                <a href={{ video.url }}>
-                    <ul>
-                        <li>{{ video.title }}</li>
-                        <li>{{ video.platform }}</li>
-                        <li>{{ video.publishTime }}</li>
-                    </ul>
-                </a>
-            </div>
+            {% endfor %}
         </div>
-        {% endfor %}
     </div>
-
     <div>
         <ul class="menu">
             <li><a href=".">comics</a></li>

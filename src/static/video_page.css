@@ -17,6 +17,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+    background: #2f405e;
 }
 
 article, aside, details, figcaption, figure, 
@@ -51,7 +52,7 @@ body{
     text-align: center;
     letter-spacing: 1pt;
     line-height: 200%;
-    }
+}
 
 .header{
     background-color: #849bba;
@@ -59,21 +60,35 @@ body{
     margin: 0 auto;
 }
 
-.content{
-    background-color: #2f405e;
-    height: 590px;
-    margin: 0 auto;
+#coindex{
+    height: 53px;
+    width: 200px;
+    background: url(images/coindex.png);
+    position: absolute;
+    top: 10px;
+    left: 70px;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    
 }
 
 .video-shelf {
-    display: inline-block;
-    height: 250px;
-    width: 900px;
+    display: flex;
+    height: 350px;
+    width: 1260px;
+    margin-left: 20px;
+    justify-content: space-around;
 }
 
 .video-box {
     height: 200px;
     width: 250px;
+    display: column;
+
 }
 
 .snapshot-box img{
@@ -81,28 +96,37 @@ body{
     width: 250px;
     background-size: contain;
     background-repeat: no-repeat;
+    display: flex;
 }
 
 .profile-box img{
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    display: flex;
+    
 }
 
 .info-box {
-    width: 200px;
-    height: 30px;
+    width: 150px;
+    height: 20px;
+    display: flex;
+}
+
+.info-box a{
     line-height: 1;
     text-decoration: none;
     text-align: left;
+    display: flex;
+    color:#adc4ee;
 }
 
 #videologo{
-    height: 48px;
-    width: 193px;
+    height: 30px;
+    width: 120px;
     background: url(images/videologo.png);
     position: absolute;
-    top: 45px;
+    top: 70px;
     left: 60px;
 }
 
@@ -147,8 +171,8 @@ body{
     width: 180px;
     background: url(cate.jpg);
     position: absolute;
-    top: 130px;
-    left: 80px;
+    top: 130px;  
+    left: 70px;
 }
 #home {
     height: 50px;
@@ -190,8 +214,9 @@ body{
     background: url(images/upcoming.png);
     position: absolute;
     top: 110px;
-    left: 320px;
+    left: 10px;
 }
+
 
 #box1 {
     width: 250px;
