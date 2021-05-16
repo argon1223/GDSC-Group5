@@ -21,6 +21,16 @@
 
 ## How to use
 
+### Installation
+in GDSC-Group5
+```
+pip install pipenv
+pipenv install
+pipenv shell
+python .\src\manage.py runserver 
+```
+them click http://127.0.0.1:8000
+
 ### Home Page
 ![](https://github.com/argon1223/GDSC-Group5/blob/main/example/homepage.png)
 1. click => redirect to [**subscription**](https://github.com/argon1223/GDSC-Group5#subscriptions)
