@@ -1,0 +1,253 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+body{
+    
+    position: relative;
+    
+    font-size : 10pt;
+    font-weight:bold; 
+    color: #849bba;
+    text-align: center;
+    letter-spacing: 1pt;
+    line-height: 200%;
+    }
+ 
+.header{
+    background-color: #2f405e;
+    height: 99px;
+    margin: 0 auto;
+}
+ 
+.content{
+    background-color: #adc4ee;
+    height: 510px;
+    margin: 0 auto;
+}
+
+#coindexlogo{
+    height: 48px;
+    width: 50px;
+    background: url(images/coindexlogo.png);
+    position: absolute;
+    top: 15px;
+    left: 10px;
+}
+
+#coindex{
+    height: 53px;
+    width: 200px;
+    background: url(images/coindex.png);
+    position: absolute;
+    top: 10px;
+    left: 70px;
+}
+#subscriptionlogo{
+    height: 27px;
+    width: 123px;
+    background: url(images/subscription.png);
+    position: absolute;
+    top: 68px;
+    left: 100px;
+}
+ 
+ 
+#searchbox{
+    height: 30px;
+    width: 550px;
+    background-color: #6b83a9;
+    position: absolute;
+    top: 20px;
+    left: 350px;
+}
+ 
+#search{
+    height: 40px;
+    width: 41px;
+    background: url(images/search1.png);
+    position: absolute;
+    top: 13px;
+    left: 920px;
+}
+ 
+#bell{
+    height: 39px;
+    width: 40px;
+    background: url(images/bell2.png);
+    position: absolute;
+    top: 13px;
+    left: 990px;
+}
+ 
+#login{
+    height: 39px;
+    width: 40px;
+    background: url(images/person1.png);
+    position: absolute;
+    top: 13px;
+    left: 1220px;
+}
+
+#catogory {
+    height: 50px;
+    width: 180px;
+    background: url(images/cateL.png);
+    position: absolute;
+    top: 130px;
+    left: 80px;
+}
+#home {
+    height: 50px;
+    width: 180px;
+    background: url(images/homeD.png);
+    position: absolute;
+    top: 180px;
+    left: 80px;
+    color: #FFFFFF;
+}
+#sub {
+    height: 50px;
+    width: 180px;
+    background: url(images/subD.png);
+    position: absolute;
+    top: 230px;
+    left: 80px;
+}
+#set {
+    height: 50px;
+    width: 180px;
+    background: url(images/setD.png);
+    position: absolute;
+    top: 280px;
+    left: 80px;
+}
+#favorite {
+    height: 50px;
+    width: 180px;
+    background: url(images/favoD.png);
+    position: absolute;
+    top: 310px;
+    left: 80px;
+}
+
+#row{
+    background-color: #4c638f;
+    width: 450px;
+    height: 35px;
+    position: absolute;
+    left: 400px;
+    top: 145px;
+}
+
+#subscribe{
+    background-color: #2f405e;
+    width: 100px;
+    height: 35px;
+    position: absolute;
+    left: 900px;
+    top: 145px;
+}
+
+#subscribe p{
+    color: #adc4ee;
+    text-align: center;
+    font-size: 15;
+}
+
+.container{
+    position: absolute;
+    top: 190px;
+    left: 400px;
+    
+    width: 500px;
+    height: 500px;
+}
+table.TB_SEPARATE {
+    width:150%;
+    border-collapse:separate;
+}
+ 
+  table.TB_SEPARATE thead th {
+    padding:5px 0px;
+    color:#839bbb;
+    background-color:#1c2834;
+    font-size: 20px;
+  }
+  table.TB_SEPARATE tbody td {
+    padding:5px 0px;
+    color:#adc4ee;
+    text-align:center;
+    background-color:#7487af;
+    border-bottom:1px solid #adc4ee;
+  }
+  table.TB_SEPARATE tfoot td {
+    padding:5px 0px;
+    text-align:center;
+    background-color:#d6d6a5;
+  }
+
+.menu{
+    margin: 0 auto;
+    display: flex;
+    
+  }
+  .menu li{
+    width: 800px;
+    text-align: center;
+    border: 1px solid #4c638f;
+  
+  }
+  .menu li a{
+    display: block;
+    background: #4c638f;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-decoration: none;
+    color: #a8bfeb;
+    font-size: 20px;
+    
+  }
+  .menu li a:hover{
+    background: #2f405e;
+    color: #a8bfeb
+  }

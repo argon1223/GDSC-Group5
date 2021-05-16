@@ -1,0 +1,450 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+body{
+    
+    position: relative;
+    
+    font-size : 10pt;
+    font-weight:bold; 
+    color: #adc4ee;
+    text-align: center;
+    letter-spacing: 1pt;
+    line-height: 200%;
+    }
+
+.header{
+    background-color: #849bba;
+    height: 99px;
+    margin: 0 auto;
+}
+
+.content{
+    background-color: #2f405e;
+    height: 590px;
+    margin: 0 auto;
+}
+
+.video-shelf {
+    display: inline-block;
+    height: 250px;
+    width: 900px;
+}
+
+.video-box {
+    height: 200px;
+    width: 250px;
+}
+
+.snapshot-box img{
+    height: 140px;
+    width: 250px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.profile-box img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.info-box {
+    width: 200px;
+    height: 30px;
+    line-height: 1;
+    text-decoration: none;
+    text-align: left;
+}
+
+#videologo{
+    height: 48px;
+    width: 193px;
+    background: url(images/videologo.png);
+    position: absolute;
+    top: 45px;
+    left: 60px;
+}
+
+#searchbox{
+    height: 30px;
+    width: 550px;
+    background: url(images/searchbox.jpg);
+    position: absolute;
+    top: 20px;
+    left: 350px;
+}
+
+#search{
+    height: 40px;
+    width: 42px;
+    background: url(images/search5.png);
+    position: absolute;
+    top: 13px;
+    left: 920px;
+}
+
+#bell{
+    height: 40px;
+    width: 40px;
+    background: url(images/bell1.png);
+    position: absolute;
+    top: 13px;
+    left: 990px;
+}
+
+#login{
+    height: 43px;
+    width: 40px;
+    background: url(images/login.png);
+    position: absolute;
+    top: 13px;
+    left: 1220px;
+}
+
+#catogory {
+    height: 50px;
+    width: 180px;
+    background: url(cate.jpg);
+    position: absolute;
+    top: 130px;
+    left: 80px;
+}
+#home {
+    height: 50px;
+    width: 180px;
+    background: url(home.png);
+    position: absolute;
+    top: 180px;
+    left: 80px;
+    color: #FFFFFF;
+}
+#sub {
+    height: 50px;
+    width: 180px;
+    background: url(sub.png);
+    position: absolute;
+    top: 230px;
+    left: 80px;
+}
+#set {
+    height: 50px;
+    width: 180px;
+    background: url(set.png);
+    position: absolute;
+    top: 280px;
+    left: 80px;
+}
+#favorite {
+    height: 50px;
+    width: 180px;
+    background: url(favo.png);
+    position: absolute;
+    top: 310px;
+    left: 80px;
+}
+
+#upcoming {
+    width: 120px;
+    height: 40px;
+    background: url(images/upcoming.png);
+    position: absolute;
+    top: 110px;
+    left: 320px;
+}
+
+#box1 {
+    width: 250px;
+    height: 138px;
+    background: url(images/peko2.png);
+    position: absolute;
+    top: 155px;
+    left: 330px;
+}
+
+#box1-1 img{
+    width: 40px;
+    height: 40px;
+    background: url(images/pekohead3.jpg);
+    position: absolute;
+    top: 300px;
+    left: 330px;
+    border-radius: 50%;
+}
+
+#box1-2 ul{
+    width: 200px;
+    height: 30px;
+    line-height: 1;
+    text-decoration: none;
+    text-align: left;
+    position: absolute;
+    top: 300px;
+    left: 380px;
+}
+
+#box2 {
+    width: 250px;
+    height: 138px;
+    background: url(images/peko2.png);
+    position: absolute;
+    top: 155px;
+    left: 660px;
+}
+
+#box2-1 img {
+    width: 40px;
+    height: 40px;
+    background: url(images/pekohead3.jpg);
+    position: absolute;
+    top: 300px;
+    left: 660px;
+    border-radius: 50%;
+}
+
+#box2-2 ul {
+    width: 200px;
+    height: 30px;
+    line-height: 1;
+    text-decoration:none;
+    text-align: left;
+    position: absolute;
+    top: 300px;
+    left: 710px;
+}
+
+#box3 {
+    width: 250px;
+    height: 138px;
+    background: url(images/peko2.png);
+    position: absolute;
+    top: 155px;
+    left: 990px;
+}
+
+#box3-1 img{
+    width: 40px;
+    height: 40px;
+    background: url(images/pekohead3.jpg);
+    position: absolute;
+    top: 300px;
+    left: 990px;
+    border-radius: 50%;
+}
+
+#box3-2 ul{
+    width: 200px;
+    height: 30px;
+    line-height: 1;
+    text-decoration:none;
+    text-align: left;
+    position: absolute;
+    top: 300px;
+    left: 1040px;
+}
+
+#line {
+    width: 1260px;
+    height: 20px;
+    background: url(images/line.png);
+    position: absolute;
+    top: 380px;
+
+}
+
+#recents {
+    width: 106px;
+    height: 40px;
+    background: url(images/recents.png);
+    position: absolute;
+    top: 400px;
+    left: 10px;
+}
+
+#box4 {
+    width: 250px;
+    height: 138px;
+    background: url(images/peko2.png);
+    position: absolute;
+    top: 450px;
+    left: 20px;
+}
+
+#box4-1 img{
+    width: 40px;
+    height: 40px;
+    background: url(images/pekohead3.jpg);
+    position: absolute;
+    top: 600px;
+    left: 20px;
+    border-radius: 50%;
+}
+
+#box4-2 ul{
+    width: 200px;
+    height: 30px;
+    line-height: 1;
+    text-decoration: none;
+    text-align: left;
+    position: absolute;
+    top: 600px;
+    left: 70px;
+}
+
+#box5 {
+    width: 250px;
+    height: 138px;
+    background: url(images/peko2.png);
+    position: absolute;
+    top: 450px;
+    left: 330px;
+}
+
+#box5-1 img {
+    width: 40px;
+    height: 40px;
+    background: url(images/pekohead3.jpg);
+    position: absolute;
+    top: 600px;
+    left: 330px;
+    border-radius: 50%;
+}
+
+#box5-2 ul {
+    width: 200px;
+    height: 30px;
+    line-height: 1;
+    text-decoration:none;
+    text-align: left;
+    position: absolute;
+    top: 600px;
+    left: 380px;
+}
+
+#box6 {
+    width: 250px;
+    height: 138px;
+    background: url(images/peko2.png);
+    position: absolute;
+    top: 450px;
+    left: 660px;
+}
+
+#box6-1 img{
+    width: 40px;
+    height: 40px;
+    background: url(images/pekohead3.jpg);
+    position: absolute;
+    top: 600px;
+    left: 660px;
+    border-radius: 50%;
+}
+
+#box6-2 ul{
+    width: 200px;
+    height: 30px;
+    line-height: 1;
+    text-decoration:none;
+    text-align: left;
+    position: absolute;
+    top: 600px;
+    left: 710px;
+}
+
+#box7 {
+    width: 250px;
+    height: 138px;
+    background: url(images/peko2.png);
+    position: absolute;
+    top: 450px;
+    left: 990px;
+}
+
+#box7-1 img{
+    width: 40px;
+    height: 40px;
+    background: url(images/pekohead3.jpg);
+    position: absolute;
+    top: 600px;
+    left: 990px;
+    border-radius: 50%;
+}
+
+#box7-2 ul{
+    width: 200px;
+    height: 30px;
+    line-height: 1;
+    text-decoration:none;
+    text-align: left;
+    position: absolute;
+    top: 600px;
+    left: 1040px;
+}
+
+.menu{
+  margin: 0 auto;
+  display: flex;
+  
+}
+
+.menu li{
+  width: 800px;
+  text-align: center;
+  border: 1px solid #4c638f;
+
+}
+
+.menu li a{
+  display: block;
+  background: #4c638f;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-decoration: none;
+  color: #a8bfeb;
+  font-size: 20px;
+}
+
+.menu li a:hover{
+  background: #2f405e;
+  color: #a8bfeb
+}

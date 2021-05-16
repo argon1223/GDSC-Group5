@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <TITLE>Coindex Subscription</TITLE>
+    <link rel="stylesheet" type="text/css" href="{% static 'subscription_page.css' %}">
+</head>
+
+<body>
+
+    <div class="header">
+    </div>
+    <div id="coindex">
+        <a href="../home">
+            <img src="{% static 'coindex.png' %}">
+        </a>
+    </div>
+    <div id="subscriptionlogo">
+    </div>
+    <div id="searchbox">
+    </div>
+    <div id="search">
+    </div>
+    <div id="bell">
+    </div>
+    <div id="login">
+    </div>
+    </div>
+
+    <div id="category"></div>
+    <div id="home">
+        <a href="../home"><img src="{% static 'home.png' %}"></a>
+    </div>
+    <div id="sub">
+        <a href="."><img src="{% static 'sub.png' %}"></a>
+    </div>
+    <div id="set">
+        <a href="."><img src="{% static 'set.png' %}"></a>
+    </div>
+    <div id="favorite">
+        <a href="."><img src="{% static 'favo.png' %}"></a>
+    </div>
+
+    <div id="upcoming">
+    </div>
+
+    <div class="content">
+    </div>
+
+    <div>
+        <form action="./add" method="POST">
+            {% csrf_token %}
+            <input name="suburl" id="row">
+            <input type="submit" name="" value="subscribe" id="subscribe">
+        </form>
+    </div>
+
+    <div class="container">
+        <table class="TB_SEPARATE">
+            <thead>
+                <tr>
+                    <th>channel</th>
+                    <th>platform</th>
+                    <th>edit</th>
+                </tr>
+            </thead>
+            {% for subscription in subscriptions %}
+            <tr>
+                <td>
+                    <a href={{ subscription.url }}>
+                        <label>{{ subscription.channel_name }}</label>
+                    </a>
+                </td>
+                <td>
+                    <label>{{ subscription.platform }}</label>
+                </td>
+                <td>
+                    <form action="./remove/{{subscription.id}}" method="POST">
+                        {% csrf_token %}
+                        <input type="submit" value="remove">
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <div>
+        <ul class="menu">
+            <li><a href=".">comics</a></li>
+            <li><a href="../video">videos</a></li>
+            <li><a href=".">streams</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

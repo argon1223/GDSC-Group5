@@ -5,6 +5,11 @@ name = "pypi"
 
 [packages]
 django = "~=3.2"
+requests = "*"
+bs4 = "*"
+aiofile = "*"
+aiohttp = "*"
+python-dateutil = "*"
 
 [dev-packages]
 

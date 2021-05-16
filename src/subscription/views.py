@@ -1,9 +1,20 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Subscription, add_subscription, delete_subscription
+
+def subscription(request):
+    subscriptions = Subscription.objects.all()
+
+    context = {
+        'subscriptions': subscriptions,
+    }
+
+    return render(request, 'subscription_page.html', context)
+
 
 def add_subscription_button_onclick(request):
     if request.method == 'POST':
-        add_subscription(request.POST.get('url'))
+        add_subscription(request.POST.get('suburl'))
+        return redirect('../subscription')
 
     subscriptions = Subscription.objects.all()
 
@@ -11,10 +22,13 @@ def add_subscription_button_onclick(request):
         'subscriptions': subscriptions,
     }
 
-    return render(request, 'index.html', context)
+    return render(request, 'subscription_page.html', context)
+
 
 def delete_subscription_button_onclick(request, pk):
-    delete_subscription(pk)
+    if request.method == 'POST':
+        delete_subscription(pk)
+        return redirect('../../subscription')
 
     subscriptions = Subscription.objects.all()
 
@@ -22,4 +36,4 @@ def delete_subscription_button_onclick(request, pk):
         'subscriptions': subscriptions,
     }
 
-    return render(request, 'index.html', context)
+    return render(request, 'subscription_page.html', context)

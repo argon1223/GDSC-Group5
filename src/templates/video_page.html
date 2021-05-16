@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<HTML>
+
+<HEAD>
+    {% load static %}
+    <meta charset="utf-8">
+    <TITLE>Video</TITLE>
+    <link rel="stylesheet" type="text/css" href="{% static 'video_page.css' %}">
+</HEAD>
+
+<BODY>
+    <div class="header">
+    </div>
+    <div id="coindex">
+        <a href="../home">
+            <img src="{% static 'coindex.png' %}">
+        </a>
+    </div>
+    <div id="videologo">
+    </div>
+    <div id="searchbox">
+    </div>
+    <div id="search">
+    </div>
+    <div id="bell">
+    </div>
+    <div id="login">
+    </div>
+
+    <div id="category"></div>
+    <div id="home">
+        <a href="../home"><img src="{% static 'home.png' %}"></a>
+    </div>
+    <div id="sub">
+        <a href="../subscription"><img src="{% static 'sub.png' %}"></a>
+    </div>
+    <div id="set">
+        <a href="."><img src="{% static 'set.png' %}"></a>
+    </div>
+    <div id="favorite">
+        <a href="."><img src="{% static 'favo.png' %}"></a>
+    </div>
+
+    <div id="upcoming">
+    </div>
+
+    <div class="video-shelf">
+        {% for upcoming in upcomings %}
+        <div class="video-box">
+            <div class="snapshot-box">
+                <a href={{ upcoming.url }}>
+                    <img src={{ upcoming.thumbnail }}>
+                </a>
+            </div>
+            <div style="display: inline-block">
+                <div class="profile-box">
+                    <a href={{ upcoming.channel_name }}>
+                        <img src={{ upcoming.profile }}>
+                    </a>
+                </div>
+                <div class="info-box">
+                    <a href={{ upcoming.url }}>
+                        <ul>
+                            <li>{{ upcoming.title }}</li>
+                            <li>{{ upcoming.platform }}</li>
+                            <li>{{ upcoming.publishTime }}</li>
+                        </ul>
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="content">
+    </div>
+    </div>
+    <div id="line">
+    </div>
+    <div id="recents">
+    </div>
+
+    <div class="video-shelf">
+        {% for video in videos %}
+        <div class="video-box">
+            <div class="snapshot-box">
+                <a href={{ video.url }}>
+                    <img src={{ video.thumbnail }}>
+                </a>
+            </div>
+            <div class="profile-box">
+                <a href={{ video.channel_name }}>
+                    <img src={{ video.profile }}>
+                </a>
+            </div>
+            <div>
+                <a href={{ video.url }}>
+                    <ul>
+                        <li>{{ video.title }}</li>
+                        <li>{{ video.platform }}</li>
+                        <li>{{ video.publishTime }}</li>
+                    </ul>
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div>
+        <ul class="menu">
+            <li><a href=".">comics</a></li>
+            <li><a href=".">videos</a></li>
+            <li><a href=".">streams</a></li>
+        </ul>
+    </div>
+</BODY>
+
+</HTML>
