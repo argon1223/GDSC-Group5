@@ -11,7 +11,7 @@
 [MIT License](https://github.com/argon1223/GDSC-Group5/blob/main/LICENSE)
 
 ## Problem to solve
-
+A new type of economy under the new normal era which allows people to receive integrated information from different.
 
 ## Technique
 1. Django
@@ -60,3 +60,5 @@ them click http://127.0.0.1:8000
 ![](https://github.com/argon1223/GDSC-Group5/blob/main/example/video2.png)
 
 ## Further plan
+* Add the functionality of comics/streams/settings
+* Support more platforms
