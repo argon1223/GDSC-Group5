@@ -30,7 +30,7 @@
 ### Videos
 ![](https://github.com/argon1223/GDSC-Group5/blob/main/example/video1.png)
 1. click => redirect to [**homepage**](https://github.com/argon1223/GDSC-Group5#home-page)
-2. click => redirect to [**the video in youtube**]
+2. click => redirect to **the video in youtube**
 ![](https://github.com/argon1223/GDSC-Group5/blob/main/example/yt.png)
 
 ### Subscriptions
